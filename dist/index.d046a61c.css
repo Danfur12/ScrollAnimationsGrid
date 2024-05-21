@@ -49,6 +49,10 @@ nav {
   position: fixed;
 }
 
+.logon {
+  max-width: 75vw;
+}
+
 h1 {
   font-size: clamp(.5em, 2vw, 2em);
 }
