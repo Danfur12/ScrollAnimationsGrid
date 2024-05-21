@@ -8,83 +8,104 @@
 	font-size: 18px;
 }
 
+
+
+@font-face {
+    font-family: 'AkzidenzGrotesk';
+    src: url("../fonts/AkzidenzGroteskBE-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
+    font-family: 'AkzidenzGroteskBold';
+    src: url("../fonts/AkzidenzGroteskBE-Md.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 	margin: 0;
-	--color-text: #111;
-	--color-bg: #d8d2cd;
-	--color-link: #b41717;
+	--color-text: #08364F;
+	--color-bg: #F9FCFC;
+	--color-link: #003AE5;
 	--color-link-hover: #000;
-	--color-bg-alt: #c3bcbc;
-	--color-text-alt: #111;
+	--color-bg-alt: #F9FCFC;
+	--color-text-alt: #08364F;
 	color: var(--color-text);
+	font-family: 'AkzidenzGrotesk';
 	background-color: var(--color-bg);
-	font-family: roc-grotesk, sans-serif;
-	text-transform: uppercase;
+	text-transform: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
 }
 
-.demo-2 {
-	--color-text: #b41717;
-	--color-text-alt: #b41717;
-	--color-bg: #000000;
-	--color-bg-alt: #9c9191;
-	--color-link-hover: #fff;
+p{
+	font-size: clamp(0.5em, 2vw, 4em);
+
 }
 
-.demo-3 {
-	--color-text: #000000;
-    --color-text-alt: #000000;
-    --color-bg: #846c64;
-    --color-bg-alt: #d1d1d1;
-    --color-link-hover: #000;
-	--color-link: #fff;
+nav{
+    z-index: 99999999;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    justify-content: space-evenly;
+
 }
 
-.demo-4 {
-	--color-text: #ffffff;
-    --color-text-alt: #78757e;
-    --color-bg: #ccc3cf;
-    --color-bg-alt: #000000;
-    --color-link-hover: #fff;
-	--color-link: #d6238c;
+h1{
+	font-size: clamp(0.5em, 2vw, 2em);
 }
 
-.demo-5 {
-	--color-text: #000000;
-    --color-text-alt: #000000;
-    --color-bg: #6c7059;
-    --color-bg-alt: #ffffff;
-    --color-link-hover: #fff;
+
+.contact-text{
+	display: flex;
+	flex-direction: column;
 }
 
-.demo-6 {
-	--color-text: #ffffff;
-    --color-text-alt: #000000;
-    --color-bg: #0f0e0e;
-    --color-bg-alt: #a2a2a2;
-    --color-link-hover: #fff;
-	--color-link: #eb3c0c;
+.contact-link{
+	display: flex;
+	justify-content: center;
 }
 
-.demo-7 {
-	--color-text: #b4176e;
-    --color-text-alt: #000000;
-    --color-bg: #101010;
-    --color-bg-alt: #988797;
-    --color-link-hover: #b4176e;
-	--color-link: #4c34eb;
+h3{
+	font-size: 0.5em;
+	text-align: center;
 }
 
-.demo-8 {
-	--color-text: #000000;
-    --color-bg: #606c62;
-    --color-link: #a0ba81;
-    --color-link-hover: #000;
-    --color-bg-alt: #dadada;
-    --color-text-alt: #111;
+.link-contact{
+	margin-left: 2em;
 }
+
+
+.link{
+	margin-left: 2em;
+	color: #334B57;
+	text-decoration: underline; /* Add underline */
+}
+
+.container-nav{
+	display: flex;
+}
+
+.right-nav{
+	display: flex;
+
+
+}
+
+
+
+.p-bold {
+	font-family: 'AkzidenzGroteskBold';
+
+
+}
+
 
 /* Page Loader */
 .js .loading::before,
@@ -248,7 +269,7 @@ a:focus-visible {
 	position: relative;
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(8,1fr);
+	grid-template-columns: repeat(4,1fr);
 }
 
 .grid__item {
@@ -316,11 +337,15 @@ a:focus-visible {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+
 }
 
-.footer p {
-	max-width: 40ch;
+.footer p{
+	width: 80vw;
 }
+
+
 
 @media screen and (min-width: 53em) {
 	.frame {
